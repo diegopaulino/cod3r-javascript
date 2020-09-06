@@ -7,7 +7,9 @@ const alunos = [
 
 // Desafio 1: Todos os alunos são bolsistas?
 const todosBolsistas = (resultado, bolsista) => resultado && bolsista
-console.log(alunos.map(a => a.bolsista).reduce(todosBolsistas))
+if(alunos.map(a => a.bolsista).reduce(todosBolsistas) === false) {
+  console.log('Não, nem todos os alunos são bolsistas')
+}
 
 // Desafio 2: Algum aluno é bolsista?
 const algumBolsista = (resultado, bolsista) => resultado || bolsista
